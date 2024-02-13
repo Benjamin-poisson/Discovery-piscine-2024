@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.img1{
+    color: white;
+    height: 1500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: monospace;
+    font-size: large;
+    background-image: url(https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2019/05/17/node_65580/9947619/public/2019/05/17/B9719625055Z.1_20190517140459_000%2BGO4DKLI0N.1-0.jpg?itok=KrKfUODQ1558095631) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.black{
+    background-color: black;
+    color: white;
+    height: 1500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: monospace;
+    font-size: large;
+}
+
+.img2{
+    color: white;
+    height: 1500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: monospace;
+    font-size: large;
+    background-image: url(https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2019/05/17/node_65580/9947619/public/2019/05/17/B9719625055Z.1_20190517140459_000%2BGO4DKLI0N.1-0.jpg?itok=KrKfUODQ1558095631) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
