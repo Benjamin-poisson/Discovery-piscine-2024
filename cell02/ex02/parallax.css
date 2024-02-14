@@ -6,16 +6,17 @@
 
 .img1{
     color: white;
-    height: 1500px;
+    height: 99vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font: monospace;
     font-size: large;
-    background-image: url(https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2019/05/17/node_65580/9947619/public/2019/05/17/B9719625055Z.1_20190517140459_000%2BGO4DKLI0N.1-0.jpg?itok=KrKfUODQ1558095631) ;
+    background-image: url(https://i.redd.it/vo9vm1fcqrp71.jpg) ;
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: center;
 }
 
 .black{
@@ -32,15 +33,18 @@
 
 .img2{
     color: white;
-    height: 1500px;
+    height: 1000px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font: monospace;
     font-size: large;
-    background-image: url(https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/rem_16_9_1124w/2019/05/17/node_65580/9947619/public/2019/05/17/B9719625055Z.1_20190517140459_000%2BGO4DKLI0N.1-0.jpg?itok=KrKfUODQ1558095631) ;
+    background-image: url(https://i.pinimg.com/originals/bc/a1/90/bca19096a0def30ba652264dbce98d88.jpg) ;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
+.parallax{
+    background-attachment: fixed;
+}
