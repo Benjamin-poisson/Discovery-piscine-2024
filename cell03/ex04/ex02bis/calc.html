@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        function calcul () {
+            var left = $('#left').val();
+            var operator = $('#operator').val();
+            var right = $('#right').val();
+            var monCalcul = left+operator+right;
+            var monResultat = eval(monCalcul);
+            
+            if ( left < 0 || right < 0) {
+                console.log("Error :(")
+                alert("Error :(");
+            } else if (right == 0 && (operator == '/' || operator == '%')) {
+                console.log("It's over 9000!")
+                alert("It's over 9000!");
+            } else {
+                console.log(eval(monResultat));
+                alert(monResultat);
+            }
+        }
+    
+        function clickMe () {
+            setInterval(() => {
+                alert("Please, use me ...");
+            }, 30000);
+        }
+    </script>
+    <style>
+        *{
+            padding: 0;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            width: 410px;
+            margin-top: 10px;
+            background-color: grey;
+            font-family: monospace;
+            font-size: larger;
+            color: rgb(255, 255, 255);
+            border: 2px rgb(165, 164, 164) solid;
+            border-radius: 50px;
+        }
+
+        .button:hover {
+            background-color: rgb(118, 118, 118);
+        }
+
+        .opperator {
+
+            background-color: grey;
+            font-family: monospace;
+            color: rgb(255, 255, 255);
+            border: 2px rgb(165, 164, 164) solid;
+            border-radius: 4px;
+        }
+
+        .opperator:hover {
+            background-color: rgb(118, 118, 118); 
+        }
+
+        .titre{
+            font-family: 'Courier New', Courier, monospace;
+            color: orange;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body style="display: flex; justify-content: center;" onload="clickMe()">
+    <div>
+        <tbody>
+            <tr>
+                <td>
+                    <h2 class="titre">
+                    CALCULATOR 9000 !
+                </h2>
+            </td>
+            </tr>
+            <tr>
+                <td><input type="number" value="10" id="left"></td>
+                <td><select class="opperator" id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select></td>
+                <td><input type="number" value="50" id="right"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><strong><button class="button" onclick="calcul()" value="Try me!">Try me !</button></strong></td>
+            </tr>
+        </tbody>
+    </div>
+</body>
+</html>

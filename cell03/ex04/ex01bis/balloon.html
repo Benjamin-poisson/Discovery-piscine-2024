@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100px;
+            border: 1px grey solid;
+            box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 9),
+            -1px 2px 20px rgba(255, 255, 255, 1) inset;
+        }
+    </style>
+    <script>
+        let size = 200;
+        let color = 'red';        
+        function changeColor(sens) {
+            if (sens == 'gonfle') {
+                switch (color) {
+                        case 'red':
+                            color = 'green'; 
+                        break;
+
+                        case 'green':
+                            color = 'blue'; 
+                        break;
+                        
+                        case 'blue': 
+                            color = 'red';
+                        break;
+                }
+            } else {
+                switch (color) {
+                    case 'red':
+                        if(size === 200) {
+                            color = 'red'
+                        }
+                        else {
+                        color = 'blue'; 
+                        }
+                    break;
+
+                    case 'green':
+                        color = 'red'; 
+                    break;
+                        
+                    case 'blue': 
+                        color = 'green';
+                    break;
+                }
+            }
+            $("#balloon").css("background", color);           
+        } 
+
+        function gonfle() {
+            if ( size >= 420 ) {
+                size = 200;
+            } else {
+                size +=10;
+            }
+                $("#balloon").css({
+                    "width": size + "px",
+                    "height": size + "px",
+                    "border-radius": size / 2 + "px"
+                });
+            changeColor('gonfle');
+        }
+
+        function deGonfle () {
+            if(size > 200) {
+                size -= 5;
+            }
+            $("#balloon").css({
+                    "width": size + "px",
+                    "height": size + "px",
+                    "border-radius": size / 2 + "px"
+                });
+            changeColor('degonfle');
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div id="balloon" class="circle" onclick="gonfle()" onmouseout="deGonfle()"></div>
+</body>
+</html>
