@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     border-collapse: collapse;
-    box-shadow: 0px 0px 3px #555;
+    box-shadow: 0px 0px 3px #3d3841;
     list-style: none;
 }
 
@@ -68,4 +68,8 @@
     height: 13px;
     color: white;
     text-decoration: none;
+}
+.button:hover {
+    background-color: rgb(57, 56, 56);
+    color: rgb(255, 255, 255);
 }
