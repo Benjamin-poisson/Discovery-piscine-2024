@@ -414,7 +414,6 @@ nav .menu-item.highlight:hover ~ #sub-menu-container #sub-menu-holder #sub-menu-
 }
 
 header {
-    position: fixed;
     width: 100%;
 }
 
@@ -556,7 +555,7 @@ header {
 
 .fondphoto {
     width: 100vw;
-    height: 800px;
+    height: 100vh;
     background-image: url(https://images.lindependant.fr/api/v1/images/view/628e4784f4c6d1637a2a1955/hd/image.jpg?v=1);
     background-repeat: no-repeat;
     background-size: cover;
@@ -572,8 +571,19 @@ box-shadow:  34px 34px 0px #4d877e,
     margin-left: 40px;
     margin-right: 40px;
     padding: 10px;
+    margin-top: 75vh;
 }
-
+.cv2 {
+    border-radius: 70px;
+background: linear-gradient(145deg, #70c4b8, #85e9da);
+box-shadow:  34px 34px 0px #4d877e,
+             -34px -34px 0px #abffff;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    margin-top: 100vh;
+}
 
 .contact {
     color: white;
@@ -590,5 +600,5 @@ hr{
 }
 
 .footer{
-
+margin-top: 80vh;
 }

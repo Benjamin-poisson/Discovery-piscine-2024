@@ -30,7 +30,11 @@ function enterName () {
 
 }
 
-function saveCookie () {
-    document.cookie = list;
-    console.log(list);
+window.addEventListener("load", function () {
+    for ( var i = 0; i < cookie.length ; i++) {
+        let cookie = cookies[i].trim();
+
+        if 
+    }
 }
+)
