@@ -12,6 +12,32 @@ body {
     height: 100vh;
     overflow: auto; /* Change this line */
     width: 100vw;
+
+    width: 100%;
+  height: 100%;
+  --s: 82px;
+  --c1: #a4ddd4;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+
+  --_g: var(--c3) 0 120deg, #0000 0;
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  background-size: calc(1.732 * var(--s)) var(--s);
 }
 
 nav {
@@ -50,6 +76,7 @@ nav .menu-text, nav .menu-text a {
     text-shadow: 0 1px 5px rgba(0,0,0,0.1);
     transition: color 0.1s ease-out;
     text-align: center;
+    
 }
 
 nav .menu-text a:hover {
@@ -74,6 +101,7 @@ nav .menu-text a:hover {
     display: block;
     height: 300px;
     width: calc(var(--menu-width) * 1.5);
+    
 }
 
 #sub-menu-container {
@@ -357,7 +385,37 @@ nav .menu-item.highlight:hover ~ #sub-menu-container #sub-menu-holder #sub-menu-
 }
 
 .hotbar {
-    background-color: rgb(255, 255, 255);
+    width: 100%;
+  height: 100%;
+  --s: 82px;
+  --c1: #a4ddd4;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+
+  --_g: var(--c3) 0 120deg, #0000 0;
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  background-size: calc(1.732 * var(--s)) var(--s);
+  box-shadow: 0px 0px 30px black;
+}
+
+header {
+    position: fixed;
+    width: 100%;
 }
 
 /*NAVBAR*/
@@ -490,8 +548,9 @@ nav .menu-item.highlight:hover ~ #sub-menu-container #sub-menu-holder #sub-menu-
 
   .buttonread {
     border: 2px solid white;
-    color: black;
-    border-radius: 2px;
+    border-radius: 5px;
+    padding: 3px;
+    text-decoration: none;
   }
 /*CARD*/
 
@@ -502,4 +561,34 @@ nav .menu-item.highlight:hover ~ #sub-menu-container #sub-menu-holder #sub-menu-
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
+}
+
+.cv {
+    border-radius: 70px;
+background: linear-gradient(145deg, #70c4b8, #85e9da);
+box-shadow:  34px 34px 0px #4d877e,
+             -34px -34px 0px #abffff;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+
+.contact {
+    color: white;
+    background-color: #7cdacc;
+    text-decoration: none;
+    border: #7cdacc 3px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+hr{
+    color: white;
+    background-color: white;
+}
+
+.footer{
+
 }
