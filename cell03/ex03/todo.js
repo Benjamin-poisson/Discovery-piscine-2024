@@ -1,5 +1,3 @@
-let list = [];
-
 function addTask (task_name) {
     var new_task = document.createElement('div');
     new_task.textContent = task_name;
@@ -30,11 +28,40 @@ function enterName () {
 
 }
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
+    let todoCookie = getCookie("TODO");
+
+    if (todoCookie){
+        let decodedTodoList = decodeURIComponent(todoCookie);
+        let JSONTodoList;
+
+        try {
+            JSONTodoList = JSON.parse(decodedTodoList);
+            JSONTodoList.forEach(addTodo);
+        }
+        catch(e) {
+            console.error("Cookie decode error", e);
+        }
+    }
+})
+
+function getCookie(name) {
+    let cookies = document.cookie.split(";");
     for ( var i = 0; i < cookie.length ; i++) {
         let cookie = cookies[i].trim();
-
-        if 
+        if (cookie.startsWith(name + '='))
+            return cookie.substring(name.length + 1);
     }
+    return null;
+
 }
-)
+
+window.addEventListener("beforeunload", function() {
+    let todoDivs = document.getElementsByClassName("todo_div");
+    let JSONString;
+    let encodedTodoList;
+
+    Array.from(todoDivs).forEach(function(todoDiv) {
+        encodedTodoList.unshift(todoDiv/textContent);
+    })
+})
