@@ -4,7 +4,7 @@ Piscine web 42Perpignan
 - `Level 12 66%`
 
 ## Features
-- Sujets ⏳
+- Sujets ✅
 - Exercices ✅
 
 ## Language
